@@ -1,9 +1,9 @@
 .navBar {
-  display: flex; 
+  display: flex;
   height: 50px;
   width: 100%;
   position: absolute;
-  justify-content: space-around; /* espacio entre los elementos para empujar el icono de menú a la derecha */
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -12,72 +12,75 @@
   position: fixed;
   height: 100%;
   width: 100%;
-  background-color:  rgb(41, 111, 41);
+  background-color: rgb(41, 111, 41);
   flex-direction: column;
   align-items: center;
 }
 
-.navLink { /* del menú */
+.navLink {
   display: flex;
   font-size: 2em;
   font-weight: 400;
   color: #f1f1f1;
   padding-top: 80px;
-
 }
 
 .navLink:hover {
   cursor: pointer;
 }
 
-
-
-.logo {
+.logoContainer {
   display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  height: 80px;
+  margin-right: 30px;
+}
+
+.logoText {
   color: #f1f1f1;
   font-weight: 500;
 }
 
 .menuIcon {
   cursor: pointer;
-  color: #f1f1f1; 
-
+  color: #f1f1f1;
 }
 
 @media (min-width: 800px) {
-  .logo {
-      font-size: 1.5em;
+  .logoText {
+    font-size: 1.5em;
   }
   .navBar {
-      align-content: center;
-      align-items: center;
-      justify-content: space-evenly;
-      height: 70px; /* ancho de la barra de arriba */
-
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 70px;
   }
-  .linksContainer { /* para que no se muestre como columna los títulos sino como fila */
-      display: flex;
-      width: 50%;
-      flex-direction: row;
-      justify-content: space-evenly;
+  .linksContainer {
+    display: flex;
+    width: 50%;
+    flex-direction: row;
+    justify-content: space-evenly;
   }
   .navLink {
-      font-weight: 500;
-      padding-top: 4px;
-      font-size: 1.2em;
-      transition: transform 0.3s ease;
+    font-weight: 500;
+    padding-top: 4px;
+    font-size: 1.2em;
+    transition: transform 0.3s ease;
   }
-
-  .navLink:hover{
-      transform: scale(1.1);
+  .navLink:hover {
+    transform: scale(1.1);
   }
 
   .navOnScroll {
-      align-content: center;
-      align-items: center;
-      justify-content: space-evenly;
-      height: 50px;
-      background-color: rgb(18, 83, 30);
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50px;
+    background-color: rgb(18, 83, 30);
   }
 }
 
@@ -96,15 +99,12 @@
   font-size: 1.2em;
   font-weight: 500;
   color: #f1f1f1;
-  background-color:rgb(80, 179, 80) ;
-  border-radius:4px;
+  background-color: rgb(80, 179, 80);
+  border-radius: 4px;
   padding: 8px;
   cursor: pointer;
-  
-
 }
 
-.SignLink:hover{
+.SignLink:hover {
   padding: 10px;
- 
 }

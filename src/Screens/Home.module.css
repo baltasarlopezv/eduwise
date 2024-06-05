@@ -6,34 +6,33 @@
   align-items: center;
 }
 
-.home p {
+.Parrafo2 {
   font-size: 3em;
-  color: #f1f1f1
+  color: #f1f1f1;
+  text-align: center;
+
+}
+
+.Parrafo{
+  color: #f1f1f1;
+  font-size: 1.9em;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 80px;
 }
 
 .titleContainer {
   padding-top: 100px;
 }
 
-.searchContainer { /* <-- Agregado contenedor de búsqueda */
-  margin-top: 130px;
-  margin-bottom: 20px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+.imageContainer {
+  padding-top: 90px;
+  text-align: center; 
+   
 }
 
-.searchLabel { /* <-- Agregado etiqueta de búsqueda */
-  color: #f1f1f1;
-  font-size: 1.2em;
-  margin-right: 15px; /* Espacio entre el texto y el input */
-}
+.image {
+  width: 900px;
 
-.searchInput { /* <-- Agregado input de búsqueda */
-  width: 40%;
-  padding: 10px; /* Incrementado padding */
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
 }

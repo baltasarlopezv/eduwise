@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react'; // <-- Agregado useState
 import styles from "./Cursos.module.css";
 
+
+
 const Cursos = () => {
+
+
+  const [searchTerm, setSearchTerm] = useState(""); // <-- Agregado estado para la barra de búsqueda
+
+  const handleSearchChange = (event) => { // <-- Agregado manejador de cambio
+    setSearchTerm(event.target.value);
+  };
+
   const cursos = [
     {
       id: 1,
@@ -63,10 +73,24 @@ const Cursos = () => {
       image: require("../assets/imagen12.png"),
     },
   ]
+ 
 
   return (
     <div className={styles.cursos}>
-      <p className={styles.cursosParrafo}>Join our vibrant community of learners and professionals. Share your journey, collaborate on projects, and grow together.</p>
+
+    <div className={styles.searchContainer}> {/* <-- Agregado contenedor de búsqueda */}
+        <label className={styles.searchLabel} htmlFor="search">Qué estás buscando?</label> {/* <-- Agregado etiqueta de búsqueda */}
+        <input 
+          id="search"
+          type="text" 
+          placeholder="Buscar cursos..." 
+          value={searchTerm}
+          onChange={handleSearchChange}
+          className={styles.searchInput}
+        />
+      </div>
+    
+      <p className={styles.cursosOracion}>Cursos Destacados :</p>
       <div className={styles.cursosContainer}>
         {cursos.map((curso) => (
           <div key={curso.id} className={styles.cursoCard}>
@@ -75,14 +99,17 @@ const Cursos = () => {
               <h3>{curso.title}</h3>
               <p className= {styles.cursoDescription}>{curso.description}</p>
               <div className={styles.cursoDetails}>
-                <span>👤 1</span>
-                <span>⏳ {curso.duration}</span>
+                <span>👥 1
+                ⏳ {curso.duration}
+                </span>
+                
               </div>
             </div>
           </div>
         ))}
       </div>
     </div>
+    
   );
 }
 

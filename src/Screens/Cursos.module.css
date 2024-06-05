@@ -6,13 +6,12 @@
   padding: 20px;
 }
 
-.cursosParrafo{
-  color: #f1f1f1;
-  font-size: 1.6em;
-  font-weight: 400;
-  text-align: center;
-  margin-bottom: 100px;
+.cursosOracion {
   padding-top: 100px;
+  margin-right: 950px;
+  color: #f1f1f1;
+  font-size: 1.3em;
+  font-weight: 600;
 }
 
 .cursoDescription {
@@ -22,19 +21,20 @@
   text-align: center;
   margin-bottom: 100px;
 }
+
 .cursosContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 50px; /* Redujo el espacio entre las tarjetas */
 }
 
 .cursoCard {
   background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  width: 300px;
+  width: 250px; /* Redujo el ancho de las tarjetas */
   transition: transform 0.3s ease;
 }
 
@@ -44,27 +44,50 @@
 
 .cursoImagen {
   width: 100%;
-  height: 200px;
+  height: 150px; 
   object-fit: cover;
 }
 
 .cursoContent {
-  padding: 20px;
+  padding: 15px; 
 }
 
 .cursoContent h3 {
-  font-size: 1.2em;
+  font-size: 1em; 
   margin-bottom: 10px;
 }
 
 .cursoContent p {
-  font-size: 1em;
-  margin-bottom: 15px;
+  font-size: 0.9em; 
+  margin-bottom: 10px; 
 }
 
 .cursoDetails {
   display: flex;
   justify-content: space-between;
-  font-size: 0.9em;
+  font-size: 0.8em; 
   color: #0e0404;
+}
+
+.searchContainer { /* <-- Agregado contenedor de búsqueda */
+  margin-top: 130px;
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchLabel { /* <-- Agregado etiqueta de búsqueda */
+  color: #f1f1f1;
+  font-size: 1.5em;
+  margin-right: 15px; /* Espacio entre el texto y el input */
+}
+
+.searchInput { /* <-- Agregado input de búsqueda */
+  width: 40%;
+  padding: 10px; /* Incrementado padding */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
 }

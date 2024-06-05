@@ -4,6 +4,7 @@ import styles from './NavBar.module.css';
 import { FiMenu } from "react-icons/fi";
 import { CgCloseO } from "react-icons/cg";
 import { useScrollPosition } from '../Hooks/scrollPosition';
+import logo from '../Imagenes/LogoEduWise.jpg'; // Ajusta la ruta según la ubicación de tu imagen
 
 const NavBar = () => {
     const [navBarOpen, setNavBarOpen] = useState(false);
@@ -44,7 +45,12 @@ const NavBar = () => {
                     ? styles.navOnScroll
                     : styles.navBar
         }>
-            {!navBarOpen && <p className={styles.logo}>EduWise | Unlock your potential</p>}
+            {!navBarOpen && (
+                <div className={styles.logoContainer}>
+                    <img src={logo} alt="EduWise Logo" className={styles.logoImage} />
+                    <p className={styles.logoText}>EduWise | Unlock your potential</p>
+                </div>
+            )}
             {!navBarOpen && windowDimension.width < 800 ? (
                 <FiMenu
                     onClick={() => setNavBarOpen(!navBarOpen)}
