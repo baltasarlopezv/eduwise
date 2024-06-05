@@ -1,0 +1,39 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, rgb(8, 14, 5), rgb(44, 101, 44));
+  padding: 20px 20px 200px;
+  align-items: center;
+}
+
+.home p {
+  font-size: 3em;
+  color: #f1f1f1
+}
+
+.titleContainer {
+  padding-top: 100px;
+}
+
+.searchContainer { /* <-- Agregado contenedor de búsqueda */
+  margin-top: 130px;
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchLabel { /* <-- Agregado etiqueta de búsqueda */
+  color: #f1f1f1;
+  font-size: 1.2em;
+  margin-right: 15px; /* Espacio entre el texto y el input */
+}
+
+.searchInput { /* <-- Agregado input de búsqueda */
+  width: 40%;
+  padding: 10px; /* Incrementado padding */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
