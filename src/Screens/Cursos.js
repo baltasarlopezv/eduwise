@@ -1,5 +1,6 @@
 import React, { useState } from 'react'; // <-- Agregado useState
 import styles from "./Cursos.module.css";
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -7,11 +8,17 @@ const Cursos = () => {
 
 
   const [searchTerm, setSearchTerm] = useState(""); // <-- Agregado estado para la barra de búsqueda
+  const navigate = useNavigate();
 
   const handleSearchChange = (event) => { // <-- Agregado manejador de cambio
     setSearchTerm(event.target.value);
   };
 
+  const handleCursoClick = (id) => {
+    navigate(`/curso/${id}`);
+  };
+
+  
   const cursos = [
     {
       id: 1,
@@ -92,8 +99,10 @@ const Cursos = () => {
     
       <p className={styles.cursosOracion}>Cursos Destacados :</p>
       <div className={styles.cursosContainer}>
-        {cursos.map((curso) => (
-          <div key={curso.id} className={styles.cursoCard}>
+        {cursos.filter(curso =>
+          curso.title.toLowerCase().includes(searchTerm.toLowerCase())
+        ).map((curso) => (
+          <div key={curso.id} className={styles.cursoCard} onClick={() => handleCursoClick(curso.id)}>
             <img className={styles.cursoImagen} src={curso.image} alt={curso.title} />
             <div className={styles.cursoContent}>
               <h3>{curso.title}</h3>
